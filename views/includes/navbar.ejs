@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg sticky-top border-bottom bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa fa-compass" aria-hidden="true"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/listings">Explore</a>
+        </li>
+        
+        
+      </ul>
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="listings/new">Add listing</a>
+        </li>
+        <%if(!currUser){%>
+        <li class="nav-item">
+          <a class="nav-link"  href="/signup"><b>Sign up</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login"><b>Log in</b></a>
+        </li>
+        <%}%>
+        <% if(currUser) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout"><b>Log out</b></a>
+        </li>
+        <%}%> 
+      </ul>
+
+    </div>
+  </div>
+</nav>
